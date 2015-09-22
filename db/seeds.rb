@@ -16,3 +16,14 @@ Category.create(category: "Sports/action")
 Category.create(category: "Real Estate")
 Category.create(category: "Photo Journalist")
 Category.create(category: "Boudoir")
+
+Profile.create(first_name: "Robert", last_name: "Monk",
+ location: "New Orleans, La", years_experience: 4, user_id: 6)
+Profile.create(first_name: "Tim", last_name: "Crane",
+ location: "Boston, Ma", years_experience: 2, user_id: 12)
+Profile.create(first_name: "Sara", last_name: "Thompson",
+ location: "Seattle, Wa", years_experience: 9, user_id: 13)
+Profile.create(first_name: "Mike", last_name: "Hizate",
+ location: "Autin, Tx", years_experience: 7, user_id: 14)
+Profile.create(first_name: "Carlos", last_name: "James",
+ location: "Mobile, Al", years_experience: 5, user_id: 5)

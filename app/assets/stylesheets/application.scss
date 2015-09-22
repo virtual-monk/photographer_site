@@ -14,3 +14,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$primary-color: #95A78D;
+$secondary-color: #F87668;
+
+.navbar {
+  background-color: $primary-color;
+}

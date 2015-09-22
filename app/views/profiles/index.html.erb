@@ -1,0 +1,7 @@
+<div class="row">
+  <% @profiles.each do |profile| %>
+    <div class="col-lg-3">
+        <%= link_to profile.username, profile %>
+    </div>
+  <% end %>
+</div>

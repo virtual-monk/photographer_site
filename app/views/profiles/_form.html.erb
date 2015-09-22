@@ -1,0 +1,20 @@
+<%= form_for @profile do |f| %>
+
+  <%= f.label :first_name %>:
+  <%= f.text_field :first_name %><br />
+
+  <%= f.label :last_name %>:
+  <%= f.text_field :last_name %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <%= f.label :years_experience %>:
+  <%= f.number_field :years_experience %><br />
+
+  <%= f.label :portfolio_website %>:
+  <%= f.text_field :portfolio_website %><br />
+
+  <%= f.submit "Create Profile" %>
+
+<% end %>
