@@ -16,6 +16,8 @@ Category.create(category: "Sports/action")
 Category.create(category: "Real Estate")
 Category.create(category: "Photo Journalist")
 Category.create(category: "Boudoir")
+Category.create(category: "Drone")
+
 
 Profile.create(first_name: "Robert", last_name: "Monk",
  location: "New Orleans, La", years_experience: 4, user_id: 6)

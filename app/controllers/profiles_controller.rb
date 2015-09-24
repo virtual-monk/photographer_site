@@ -7,6 +7,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @packages = Package.where(profile_id: params[:id])
   end
 
   def new
@@ -32,19 +33,31 @@ class ProfilesController < ApplicationController
   def update
     access_to_profile?(current_user)
     if @profile.update(profile_params)
-      flash[:notice] = "Profile Information Updated"
+      flash[:notice] = "Profile information updated"
       redirect_to profile_path
     else
-      flash[:notice] = "Invalid Profile Submission"
+      flash[:notice] = "Invalid profile submission"
       render :edit
     end
   end
 
+  def destroy
+    access_to_profile?(current_user)
+    if @profile.destroy
+      flash[:notice] = "Profile successfully deleted"
+      redirect_to root_path
+    else
+      flash[:notice] = "Profile was not deleted"
+    end
+  end
+
   def access_to_profile?(current_user)
-    if current_user.admin || current_user.id == params[:id]
+    profile = Profile.find(params[:id]).user.id
+    if current_user.admin || current_user.id == profile
       @profile = Profile.find(params[:id])
     else
-      @profile = current_user.profiles.find(params[:id])
+      flash[:notice] = "You do not have access to this profile"
+      redirect_to root_path
     end
   end
 
