@@ -17,6 +17,7 @@ Category.create(category: "Real Estate")
 Category.create(category: "Photo Journalist")
 Category.create(category: "Boudoir")
 Category.create(category: "Drone")
+Category.create(category: "Architectural")
 
 
 Profile.create(first_name: "Robert", last_name: "Monk",

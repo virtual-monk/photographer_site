@@ -12,7 +12,11 @@ class Profile < ActiveRecord::Base
   validates :user_id, presence: true
 
   def owner_or_admin?(logged_in_user)
-    user == logged_in_user || logged_in_user.admin
+    if logged_in_user == nil
+      return false
+    elsif user == logged_in_user || logged_in_user.admin
+      return true
+    end
   end
 
   def username

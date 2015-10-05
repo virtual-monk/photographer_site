@@ -13,10 +13,14 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "index.scss";
 
 $primary-color: #95A78D;
 $secondary-color: #F87668;
-
+@mixin index {
+  margin-top: 2%;
+  margin-left: 4%;
+}
 .navbar {
   background-color: $primary-color;
 }

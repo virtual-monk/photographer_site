@@ -1,0 +1,15 @@
+$primary-color: #95A78D;
+$secondary-color: #F87668;
+@mixin index {
+  margin-top: 2%;
+  margin-left: 4%;
+}
+.index-panel {
+  background-color: $primary-color;
+}
+.image-panel {
+  @include index;
+}
+.index-container {
+  padding-left: 3.5%;
+}

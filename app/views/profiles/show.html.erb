@@ -7,14 +7,16 @@
   <p><%= link_to "Edit Profile", edit_profile_path(@profile) %></p>
   <p><%= link_to "Delete Profile", profile_path(@profile), method: :delete %></p>
   <p><%= link_to "New Package", new_profile_package_path(@profile) %></p>
+  <% else%>
 <% end %>
 
 <h3>Packages</h3>
 <% @packages.each do |package| %>
   <p><%= package.title %></p>
-  <% if package.package_owner_or_admin?(current_user) %>
-
-    <p><%= link_to "Edit Package", edit_profile_package_path(@profile, package) %></p>
-    <p><%= link_to "Delete Package", profile_package_path(@profile, package), method: :delete %></p>
+  <% if current_user %>
+    <% if package.package_owner_or_admin?(current_user) %>
+      <p><%= link_to "Edit Package", edit_profile_package_path(@profile, package) %></p>
+      <p><%= link_to "Delete Package", profile_package_path(@profile, package), method: :delete %></p>
+    <% end %>
   <% end %>
 <% end %>

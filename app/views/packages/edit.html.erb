@@ -1,14 +1,1 @@
-<%= form_for [@profile, @package] do |f| %>
-
-  <%= f.label :title %>:
-  <%= f.text_field :title %><br />
-
-  <%= f.label :price %>:
-  <%= f.text_field :price %><br />
-
-  <%= f.label :details %>:
-  <%= f.text_area :details %><br />
-
-  <%= f.submit "Create Package" %>
-
-<% end %>
+<%= render "form" %>
