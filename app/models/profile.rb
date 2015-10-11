@@ -11,6 +11,8 @@ class Profile < ActiveRecord::Base
   validates :years_experience, presence: true
   validates :user_id, presence: true
 
+  mount_uploader :avatar, AvatarUploader
+
   def owner_or_admin?(logged_in_user)
     if logged_in_user == nil
       return false

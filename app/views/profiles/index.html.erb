@@ -6,7 +6,10 @@
         <%= image_tag("test_photo.jpg", width:"100%")%>
       </div>
       <div class="row index-panel">
-        <div class="col-lg-offset-2 col-lg-4">
+        <div class="col-lg-4">
+          <%= image_tag profile.avatar_url.to_s, width: "90%" %>
+        </div>
+        <div class="col-lg-4">
         <%= link_to profile.username, profile %>
         </div>
         <div class="col-lg-4">

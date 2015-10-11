@@ -73,7 +73,7 @@ class ProfilesController < ApplicationController
   protected
   def profile_params
     params.require(:profile).permit(:first_name, :last_name, :location,
-      :years_experience, :user_id)
+      :years_experience, :user_id, :avatar)
   end
 
 end
