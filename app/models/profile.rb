@@ -13,6 +13,19 @@ class Profile < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  searchable do
+    string :first_name
+    string :last_name
+    string :location
+    string :median_price
+    integer :category_id, :multiple => true
+
+    text :title, :body
+    text :comments do
+      comments.map { |comment| comment.body }
+    end
+  end
+
   def owner_or_admin?(logged_in_user)
     if logged_in_user == nil
       return false

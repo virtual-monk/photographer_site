@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'pry'
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'kaminari'
@@ -12,11 +11,15 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'carrierwave'
-
-
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'mini_magick'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'cancancan'
+gem 'rolify'
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
